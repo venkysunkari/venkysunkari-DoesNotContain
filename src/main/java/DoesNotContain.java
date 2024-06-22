@@ -1,4 +1,3 @@
-
 public class DoesNotContain {
     /**
      * The inverse of the contains value challenge: check if the array does *not* contain the value.
@@ -14,7 +13,15 @@ public class DoesNotContain {
      * @param target the value we are searching for.
      * @return true if arr does not contain target. false otherwise.
      */
-    public boolean arrayDoesNotContain(int[] arr, int target){
-        return false;
+    public boolean arrayDoesNotContain(int[] arr, int target) {
+        // Iterate through the array
+        for (int i = 0; i < arr.length; i++) {
+            // If any element matches the target, return false
+            if (arr[i] == target) {
+                return false;
+            }
+        }
+        // If no element matches the target, return true
+        return true;
     }
 }
